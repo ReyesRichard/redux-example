@@ -5,13 +5,15 @@ import {
   Route,
 } from "react-router-dom";
 
-import Spinner from  '../components/Spinner'
-import Menu from  '../components/Menu'
+import Spinner from  'Components/Spinner'
+import Menu from  'Components/Menu'
+import {PrivateRoute} from  './privateRouter'
 
 // Containers
-const Home =  lazy(() => import('../containers/Home'));
-const Contacto =  lazy(() => import('../containers/Contacto'));
-const Blog =  lazy(() => import('../containers/Blog'));
+const Home =  lazy(() => import('Containers/Home'));
+const Contacto =  lazy(() => import('Containers/Contacto'));
+const Blog =  lazy(() => import('Containers/Blog'));
+const Login =  lazy(() => import('Containers/Login'));
 
 export default function App() {
     return (
@@ -23,11 +25,14 @@ export default function App() {
             <Menu />  
             <Switch>
                 <Suspense fallback={<Spinner />}>
-                    <Route exact path="/blog">
+                    <PrivateRoute exact path="/blog">
                         <Blog />
-                    </Route>
+                    </PrivateRoute>
                     <Route exact path="/contacto">
                         <Contacto />
+                    </Route>
+                    <Route exact path="/login">
+                        <Login />
                     </Route>
                     <Route exact path="/">
                         <Home />

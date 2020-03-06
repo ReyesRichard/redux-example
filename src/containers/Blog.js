@@ -1,16 +1,35 @@
 import React, { Fragment } from 'react'
-import SEO from '../components/SEO'
+import { withRouter} from 'react-router-dom'
 
-function Blog() {
+import {fakeAuth} from 'Router/privateRouter'
+import Seo from '../Components/SEO'
+
+function Blog({history}) {
+
     return (
         <Fragment>
-            <SEO 
+            <Seo
                 title='Blog | Redux example'
             />
             <main>
                 <section>
                     <div className="container">
                         <h1>Blog</h1>
+                        { 
+                            fakeAuth.isAuthenticated ? (
+                            <p>
+                            Welcome!{" "}
+                            <button
+                                onClick={() => {
+                                fakeAuth.signout(() => history.push("/"));
+                                }}
+                            >
+                                Sign out
+                            </button>
+                            </p>
+                        ) : (
+                            <p>You are not logged in.</p>
+                        )}
                     </div>
                 </section>
             </main>
@@ -18,4 +37,4 @@ function Blog() {
     )
 }
 
-export default Blog
+export default withRouter(Blog)

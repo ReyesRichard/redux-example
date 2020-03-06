@@ -1,10 +1,16 @@
 import React, {Fragment} from 'react'
-import SEO from '../components/SEO'
+import Seo from 'Components/SEO'
+// import  dotenv from 'dotenv'
+// import  dotenvExpand from 'dotenv-expand'
+
+// const myEnv =  dotenv.config()
+// const explaid = dotenvExpand(myEnv)
+// console.log( explaid)
 
 function Home() {
     return (
         <Fragment>
-            <SEO 
+            <Seo 
                 title='Redux example'
                 description='Site with a example of redux and your use'
             />
