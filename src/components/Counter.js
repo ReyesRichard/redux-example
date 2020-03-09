@@ -18,7 +18,7 @@ function CounterComponent(props) {
     return (
         <div>
             <p>Contador</p>
-            <p>Valor: {props.counter}</p>
+            <p>Valor: {props.value}</p>
             <button onClick={props.increment}>+</button>
             <button onClick={props.decrement}>-</button>
         </div>
@@ -27,7 +27,9 @@ function CounterComponent(props) {
 
 // Para pasar el valor por props, además se le puede poner un valor para que se reciba de difernte forma
 const mapStateToProps = (state) => {
-    return state
+    return{
+        value: state.counter,
+    }
 }
 
 // Maneja el dispatch

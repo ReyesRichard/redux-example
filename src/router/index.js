@@ -16,6 +16,7 @@ const Home =  lazy(() => import('Containers/Home'));
 const Contacto =  lazy(() => import('Containers/Contacto'));
 const Blog =  lazy(() => import('Containers/Blog'));
 const Login =  lazy(() => import('Containers/Login'));
+const UserView =  lazy(() => import('Containers/User/View'));
 const Counter =  lazy(() => import('Containers/Contador'));
 
 export default function App({store}) {
@@ -42,6 +43,9 @@ export default function App({store}) {
                       </Route>
                       <Route exact path="/login">
                           <Login />
+                      </Route>
+                      <Route exact path="/usuario">
+                          <UserView />
                       </Route>
                       <Route exact path="/contador">
                           <Counter />
