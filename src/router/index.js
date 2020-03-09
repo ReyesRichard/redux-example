@@ -18,6 +18,8 @@ const Blog =  lazy(() => import('Containers/Blog'));
 const Login =  lazy(() => import('Containers/Login'));
 const UserView =  lazy(() => import('Containers/User/View'));
 const Counter =  lazy(() => import('Containers/Contador'));
+const Zoo =  lazy(() => import('Containers/Zoo'));
+const ZooEdit =  lazy(() => import('Containers/Zoo/edit'));
 
 export default function App({store}) {
     return (
@@ -46,6 +48,12 @@ export default function App({store}) {
                       </Route>
                       <Route exact path="/usuario">
                           <UserView />
+                      </Route>
+                      <Route exact path="/zoo">
+                          <Zoo />
+                      </Route>
+                      <Route exact path="/zooEdit/:id">
+                          <ZooEdit />
                       </Route>
                       <Route exact path="/contador">
                           <Counter />

@@ -18,6 +18,12 @@ function Menu() {
                     <Link to="/contador">Contador</Link>
                 </li>
                 <li>
+                    <Link to="/zoo">Zoo</Link>
+                    <ul>
+                        <Link to="/zooEdit">Zoo Editar</Link>
+                    </ul>
+                </li>
+                <li>
                     <Link to="/usuario">Usuario</Link>
                 </li>
                 <li>
