@@ -5,7 +5,7 @@ export const DECREMENT = 'decrement'
 // other contatants
 
 
-// actions creators
+// actions creators (se le pasan al dispatch)
 export function increment() {
     return { type: INCREMENT }
 }

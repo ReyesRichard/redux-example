@@ -15,6 +15,9 @@ function Menu() {
                     <Link to="/contacto">Contacto</Link>
                 </li>
                 <li>
+                    <Link to="/contador">Contador</Link>
+                </li>
+                <li>
                     <Link to="/login">Login</Link>
                 </li>
             </ul>

@@ -1,13 +1,11 @@
 import React, {Fragment} from 'react'
+import Counter from 'Components/Counter'
 
 function ContadorContainer() {
     return (
         <Fragment>
             <div>
-                <p>Contador</p>
-                <p>Valor: 0</p>
-                <button> +</button>
-                <button> -</button>
+                <Counter /> 
             </div>
         </Fragment>
     )

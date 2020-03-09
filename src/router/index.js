@@ -4,12 +4,12 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import {Provider} from 'react-redux';
+import { Provider } from 'react-redux';
 
 import Spinner from  'Components/Spinner'
 import Menu from  'Components/Menu'
 import {PrivateRoute} from  './privateRouter'
-import store from  'store'
+// import store from  'store'
 
 // Containers
 const Home =  lazy(() => import('Containers/Home'));
@@ -18,7 +18,7 @@ const Blog =  lazy(() => import('Containers/Blog'));
 const Login =  lazy(() => import('Containers/Login'));
 const Counter =  lazy(() => import('Containers/Contador'));
 
-export default function App() {
+export default function App({store}) {
     return (
       <Provider store={store}>
                   
