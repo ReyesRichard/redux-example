@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import { withRouter} from 'react-router-dom'
 
 import {fakeAuth} from 'Router/privateRouter'
-import Seo from '../Components/SEO'
+import Seo from 'Components/SEO'
 
 function Blog({history}) {
 
